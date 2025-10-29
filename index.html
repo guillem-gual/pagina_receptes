@@ -13,7 +13,7 @@
 
 		<style>
 			div{
-				width: margin-right;
+				width: margin;
 				box-sizing: border-box;
 			}
 			body {
@@ -34,7 +34,7 @@
 				font-size: 9px;
 			}
 			.orange_box{
-				width: 1000px;
+				width: 100%;
 				background-color: #cb997e;
 				border-radius: 25px;
 				color: black;
@@ -64,8 +64,7 @@
 			.mostPopularImg{
 				width: 80px;
 				opacity: 40%;
-				float: center;
-				padding: 30px 200px;
+				text-align: center;
 				padding-top: 70px;
 				}
 			.titleMostPopular{
@@ -78,6 +77,7 @@
 				margin-left: 15px;
 				margin-top: -10px;
 				padding-bottom: 20px;
+				text-align: left;
 			}
 			.imgAuthor{
 				opacity: 70%;
@@ -97,34 +97,24 @@
 				font-size: 10px;
 				margin: 0px;
 			}
+			@media (max-width: 768){
+
+			}
 		</style>
+
 	</head>
 
 	<body>
 		<div style="background-color: #edede8;">
-			<div style="background-color: #ffe8d6; border: 1px solid black;">
-				<p style=" font-size: 10px;">
-					<img src="IMG_Practica1\logoipsum.png" width="25px" style="float: left; padding-left: 30px;">
-					<table style="font-size:10px;">
-						<tbody>
-							<tr>
-								<td>
-									<strong class="logoipsum" style="padding: 40px 50px; padding-left: 0px;">logoipsum</strong>
-								</td>
-								<td style="padding: 0px 10px;">
-									Latest recipes
-								</td>
-								<td style="padding: 0px 10px">
-									Most popular recipes
-								</td>
-								<td style="padding: 0px 10px">
-									Categories
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</p>
-				<img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" width="30px" style="float: right; padding-right: 15px; margin-top: -34px;">
+			<div style="background-color: #ffe8d6; border: 1px solid black; display: flex; align-items: center; justify-content: space-between; padding: 10px 30px;">
+			  <div style="display: flex; align-items: center; gap: 10px;">
+			    <img src="IMG_Practica1/logoipsum.png" width="25px">
+			    <strong class="logoipsum">logoipsum</strong>
+			    <span style="margin-left: 40px; font-size: 11px;">Latest recipes</span>
+			    <span style="margin-left: 20px; font-size: 11px;">Most popular recipes</span>
+			    <span style="margin-left: 20px; font-size: 11px;">Categories</span>
+			  </div>
+			  <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" width="30px">
 			</div>
 			<div style="padding: 75px 75px;">
 				<table cellpadding="20px" style="margin-inline: auto;">
@@ -156,9 +146,9 @@
 				<strong style="color: black; padding: 15px">Healthy</strong>
 			</p>
 			<hr>
-			<div style="margin-inline: 70px; margin-top: 40px; margin-bottom: 40px;">
-				<p style="font-size: 25px">Latest recipes</p>
-				<table cellspacing="10px" style="margin-inline:100px">
+			<div style="margin-inline: 80px; margin-top: 40px; margin-bottom: 40px;">
+				<p style="font-size: 25px; display: flex;">Latest recipes</p>
+				<table cellspacing="10px" style="width: 100%;">
 					<tbody>
 						<tr style="background-color: #f4eae5; text-align: center;">
 							<td style="background-color: #f4eae5">
@@ -203,7 +193,7 @@
 					</tbody>
 				</table>
 				<br>
-				<table class="orange_box" cellpadding="40px" style="margin-inline: auto">
+				<table class="orange_box" cellpadding="30px" style="margin-top: 40px;">
 					<tbody>
 						<tr>
 							<td style="font-size: 17px;">
@@ -217,26 +207,26 @@
 					</tbody>
 				</table>
 				<p style="font-size: 25px">Most popular recipes</p>
-				<table cellspacing="20px" style="margin-inline: auto; width: auto;">
+				<table cellspacing="10px" style="width: 100%;">
 					<tr>
-						<td style="background-color: #f4eae5;">
+						<td style="background-color: #f4eae5; text-align: center;">
 							<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" class="mostPopularImg">
 							<p class="titleMostPopular"><strong>Healthy</strong></p>
 							<p class="textMostPopular">Grantma's Butterscotch PIE</p>
 						</td>
-						<td style="background-color: #f4eae5;">
+						<td style="background-color: #f4eae5; text-align: center;">
 							<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" class="mostPopularImg">
 							<p class="titleMostPopular"><strong>Healthy</strong></p>
 							<p class="textMostPopular">10 Minute Magic Orange Sauce</p>
 						</td>
 					</tr>
 					<tr>
-						<td style="background-color: #f4eae5;">
+						<td style="background-color: #f4eae5; text-align: center;">
 							<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" class="mostPopularImg">
 							<p class="titleMostPopular"><strong>Bread / Sweet</strong></p>
 							<p class="textMostPopular">Perfect Avocado Toas For Breackfast</p>
 						</td>
-						<td style="background-color: #f4eae5;">
+						<td style="background-color: #f4eae5; text-align: center;">
 							<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" class="mostPopularImg">
 							<p class="titleMostPopular"><strong>Healthy</strong></p>
 							<p class="textMostPopular">Summer Berry Parfaid</p>
@@ -247,41 +237,37 @@
 		</div>
 		<div style="background-color: #ffe8d6;">
 			<div style="background-color: #ddbea9; border: 1px solid black;">
-				<table cellspacing="30" style="margin-inline: 300px;"> 
-					<tr>
-						<td>
-							<img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" class="imgAuthor">
-						</td>
-						<td>
-							<p class="titleAuthor" style="padding-bottom: 8px;"><strong>About the Author</strong></p>
-							<p class="nameAuthor" style="padding-bottom: 8px;">Jhon Doe</p>
-							<p class="infoAuthor">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate. Phasellus iaculis tellus augue, at ultrices lacus efficitur a. Mauris a nibh erat. In sed massa sed erat consectetur convallis vel vitae felis. Vivamus in tempus erat. Cras porta nisi sit amet leo dictum, non suscipit neque tincidunt. Ut et enim ligula.</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div style="margin-inline: 70px; padding-top: 30px;">
-				<p>
-					<img src="IMG_Practica1\logoipsum.png" width="25px" style="float: left; padding-left: 10px; margin-top: -5px;g">
-					<strong class="logoipsum" style="padding: 0px 10px;">logoipsum</strong>
-				</p>
-				<table style="font-size:10px; padding-bottom: 50px; margin-top: -5px;">
-					<tbody>
+				<div style="margin-inline: 200px; display: flex;">
+					<table cellspacing="30" style="margin-inline: auto;"> 
 						<tr>
-							<td style="padding: 0px 10px;">
-								Latest recipes
+							<td>
+								<img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" class="	imgAuthor">
 							</td>
-							<td style="padding: 0px 10px">
-								Most popular recipes
-							</td>
-							<td style="padding: 0px 10px">
-								Categories
+							<td>
+								<p class="titleAuthor" style="padding-bottom: 8px;"><strong>About the Author</strong></p>
+								<p class="nameAuthor" style="padding-bottom: 8px;">Jhon Doe</p>
+								<p class="infoAuthor">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate. Phasellus iaculis tellus augue, at ultrices lacus efficitur a. Mauris a nibh erat. In sed massa sed erat consectetur convallis vel vitae felis. Vivamus in tempus erat. Cras porta nisi sit amet leo dictum, non suscipit neque tincidunt. Ut et enim ligula.</p>
 							</td>
 						</tr>
-					</tbody>
-				</table>
-				<img src="IMG_Practica1\xarxesLogoipsum.png" width="100px" style="float:right; margin-top: -70px;">
+					</table>
+				</div>
 			</div>
+			<div style="background-color: #ffe8d6; padding: 20px 80px;">
+ 				<div style="display: flex; align-items: center; justify-content: space-between;">
+ 					<div>
+ 						<div style="display: flex; align-items: center;">
+ 							<img src="IMG_Practica1/logoipsum.png" width="25px">
+ 							<strong class="logoipsum" style="margin-left: 8px;">logoipsum</strong>
+ 						</div>
+ 						<div style="margin-top: 5px; font-size: 10px;">
+ 							<span style="margin-right: 15px;">Latest recipes</span>
+ 							<span style="margin-right: 15px;">Most popular recipes</span>
+ 							<span>Categories</span>
+ 						</div>
+ 					</div>
+ 					<img src="IMG_Practica1/xarxesLogoipsum.png" width="100px">
+ 				</div>
+ 			</div>
 		</div>
 	</body>
 </html>
