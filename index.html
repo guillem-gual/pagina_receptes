@@ -20,20 +20,63 @@
 				margin: 0 auto;
 				font-family: "Verdana";
 			}
+			table {
+				width: 100%;
+			}
 			.logoipsum{
 				font-size: 15px; 
 				color: #06323f;
+				padding-left: 10px;
+			}
+
+			.imgUser{
+				width: 30px;
+			}
+
+			.imgImgHeader {
+				display: flex;
+				text-align: center; 
+				opacity: 40%;
+			}
+
+			.imgLatestRecipes{
+				width: 80px;
+				background-color: #f4eae5;
+				text-align: center;
+				padding-top: 70px;
+				padding-bottom: 30px;
+				padding-inline: 30%;
+			}
+			.titleLatestRecipes{
+				text-align: left;
+				font-size:17px;
+				padding-left: 15px;
+			}
+			.healthyLatestRecipes{
+				text-align: left;
+				font-size:10px;
+				padding-left: 15px;
+				margin-top: -10px;
+			}
+			.textLatestRecipes{
+				text-align: justify; 
+				font-size:8px;
+				padding-left: 15px;
+				margin-top: -5px;
 			}
 			.see_recipe_box{
+				margin-left: 15px;
 				background-color: white;
 				border-radius: 25px;
 				border: 2px solid #d3ac97;
 				color: #d3ac97;
 				padding: 8px 20px;
+				float: left;
 				text-align: left;
 				font-size: 9px;
 			}
 			.orange_box{
+				padding: 10px 30px;
 				width: 100%;
 				background-color: #cb997e;
 				border-radius: 25px;
@@ -97,27 +140,106 @@
 				font-size: 10px;
 				margin: 0px;
 			}
+
+			.bottomMenu {
+				margin-top: 5px; 
+				font-size: 10px;
+			}
+
+			@media (max-width: 600px) {
+
+				table {
+					width: 100% !important;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				td {
+					display: block;
+					width: 100%;
+					text-align: center !important;
+					padding: 10px !important;
+					margin-bottom: 10px;
+				}
+
+				.imgUser{
+					content: url(https://cdn-icons-png.flaticon.com/512/1828/1828853.png);
+				}
+
+				.imgImgHeader {
+					display: inline-block;
+				}
+
+				.imgLatestRecipes{
+					margin-top: 20px;
+					padding-inline: 35%;
+				}
+
+				.titleLatestRecipes{
+					padding-left: 0px;
+				}
+
+				.healthyLatestRecipes{
+					padding-left: 0px;
+				}
+
+				.textLatestRecipes{
+					padding-left: 0px;
+				}
+
+				.see_recipe_box{
+					margin-left: 0px;
+				}
+
+				.email_box {
+					width: 60%;
+					margin: auto;
+					font-size: 11px;
+				}
+
+				.button_send {
+					width: 60px;
+					font-size: 10px;
+				}
+
+				.imgAuthor {
+					width: 150px;
+				}
+
+				.infoAuthor {
+					text-align: justify;
+					padding: 10px;
+				}
+				
+				.bottomMenu{
+					flex-direction: column;
+					display: block;
+				}
+				div span{
+					display: none;
+				}
+			}
 		</style>
 
 	</head>
 
 	<body>
 		<div style="background-color: #edede8;">
-			<div style="background-color: #ffe8d6; border: 1px solid black; display: flex; align-items: center; justify-content: space-between; padding: 10px 30px;">
-			  <div style="display: flex; align-items: center; gap: 10px;">
+			<div style="background-color: #ffe8d6; border: 1px solid black; display: flex; justify-content: space-between; padding: 10px 30px;">
+			  <div style="display: flex; align-items: center;">
 			    <img src="IMG_Practica1/logoipsum.png" width="25px">
 			    <strong class="logoipsum">logoipsum</strong>
 			    <span style="margin-left: 40px; font-size: 11px;">Latest recipes</span>
 			    <span style="margin-left: 20px; font-size: 11px;">Most popular recipes</span>
 			    <span style="margin-left: 20px; font-size: 11px;">Categories</span>
 			  </div>
-			  <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" width="30px">
+			  <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" class="imgUser">
 			</div>
-			<div style="padding: 75px 75px;">
-				<table cellpadding="20px" style="margin-inline: auto;">
+			<div style="padding: 75px 75px; margin-inline: auto;">
+				<table cellpadding="20px">
 					<tbody>
 						<tr>
-							<td style="font-size: 35px; text-align: left; padding-right: 100px;">
+							<td style="font-size: 35px; text-align: left !important;">
 								<strong style="font-size: 10px">Healthy</strong>
 								<br>
 								<strong style="font-size: 30px">10 Minutes Magic</strong>
@@ -126,7 +248,7 @@
 								<br>
 								<button class="see_recipe_box" style="background-color: #edede8; margin-top: 10px;">see recipe</button>
 							</td>
-							<td style="text-align: center; padding-left: 90px; opacity: 40%;">
+							<td class="imgImgHeader">
 								<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" width="100px">
 							</td>
 						</tr>
@@ -143,47 +265,23 @@
 				<strong style="color: black; padding: 15px">Healthy</strong>
 			</p>
 			<hr>
-			<div style="margin-inline: 80px; margin-top: 40px; margin-bottom: 40px;">
+			<div style="margin-inline: 50px; margin-top: 40px; margin-bottom: 40px;">
 				<p style="font-size: 25px; display: flex;">Latest recipes</p>
 				<table cellspacing="10px" style="width: 100%;">
 					<tbody>
-						<tr style="background-color: #f4eae5; text-align: center;">
-							<td style="background-color: #f4eae5">
-								<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" width="60px" style="opacity: 40%; margin: 60px;">
-							</td>
-							<td style="background-color: #f4eae5">
-								<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" width="60px" style="opacity:40%; margin: 60px;">
-							</td>
-						</tr>
-						<tr style="font-size:17px">
-							<td>
-								Grantma's Butterscotch PIE
-							</td>
-							<td>
-								10 Minute Magic Orange Sauce
-							</td>
-						</tr>
-						<tr style="font-size:10px">
-							<td>
-								<strong>Healthy</strong>
-							</td>
-							<td>
-								<strong>Healthy</strong>
-							</td>
-						</tr>
 						<tr>
-							<td style="text-align: justify; font-size:8px">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat viverra diam, ac tempus est faucibus in. Sed cursus ante vel fermentum malesuada. Fusce placerat interdum sem, id porttitor tellus semper vel. Pellentesque fringilla, velit
-							</td>
-							<td style="text-align: justify; font-size:8px">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat viverra diam, ac tempus est faucibus in. Sed cursus ante vel fermentum malesuada. Fusce placerat interdum sem, id porttitor tellus semper vel. Pellentesque fringilla, velit
-							</td>
-						</tr>
-						<tr>
-							<td>
+							<td style="text-align: center;">
+								<p><img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" class="imgLatestRecipes"></p>
+								<p class="titleLatestRecipes">Grantma's Butterscotch PIE</p>
+								<p class="healthyLatestRecipes"><strong>Healthy</strong></p>
+								<p class="textLatestRecipes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat viverra diam, ac tempus est faucibus in. Sed cursus ante vel fermentum malesuada. Fusce placerat interdum sem, id porttitor tellus semper vel. Pellentesque fringilla, velit</p>
 								<button class="see_recipe_box">see recipe</button>
 							</td>
-							<td>
+							<td style="text-align: center;">
+								<img src="https://cdn-icons-png.flaticon.com/512/711/711169.png" class="imgLatestRecipes">
+								<p class="titleLatestRecipes">10 Minute Magic Orange Sauce</p>
+								<p class="healthyLatestRecipes"><strong>Healthy</strong></p>
+								<p class="textLatestRecipes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat viverra diam, ac tempus est faucibus in. Sed cursus ante vel fermentum malesuada. Fusce placerat interdum sem, id porttitor tellus semper vel. Pellentesque fringilla, velit</p>
 								<button class="see_recipe_box">see recipe</button>
 							</td>
 						</tr>
@@ -234,7 +332,7 @@
 		</div>
 		<div style="background-color: #ffe8d6;">
 			<div style="background-color: #ddbea9; border: 1px solid black;">
-				<div style="margin-inline: 200px; display: flex;">
+				<div style="margin-inline: 20px; display: flex;">
 					<table cellspacing="30" style="margin-inline: auto;"> 
 						<tr>
 							<td>
@@ -253,13 +351,13 @@
  				<div style="display: flex; align-items: center; justify-content: space-between;">
  					<div>
  						<div style="display: flex; align-items: center;">
- 							<img src="IMG_Practica1/logoipsum.png" width="25px">
- 							<strong class="logoipsum" style="margin-left: 8px;">logoipsum</strong>
+ 								<img src="IMG_Practica1/logoipsum.png" width="25px">
+			  					<strong class="logoipsum">logoipsum</strong>
  						</div>
- 						<div style="margin-top: 5px; font-size: 10px;">
- 							<span style="margin-right: 15px;">Latest recipes</span>
- 							<span style="margin-right: 15px;">Most popular recipes</span>
- 							<span>Categories</span>
+ 						<div>
+ 							<span class="bottomMenu" style="margin-right: 15px;">Latest recipes</span>
+ 							<span class="bottomMenu" style="margin-right: 15px;">Most popular recipes</span>
+ 							<span class="bottomMenu">Categories</span>
  						</div>
  					</div>
  					<img src="IMG_Practica1/xarxesLogoipsum.png" width="100px">
